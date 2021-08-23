@@ -20,3 +20,11 @@ async function filterData() {
 	const filteredData = toArray.filter(toArray => toArray[1] > 10);
 	console.log(filteredData)
 }
+
+async function tryCatch() {
+	const response = await fetch(url)
+	const data = await response.json();
+	dataSave = data.rates;
+	console.log(dataSave)
+		.catch(err => console.log(err));
+}
